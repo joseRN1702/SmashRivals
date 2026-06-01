@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://b1fr5gdau2ycq"]
+
+[ext_resource type="Script" uid="uid://dmdllitxj0a5q" path="res://scripts/character_select.gd" id="1_bow2h"]
+[ext_resource type="Texture2D" uid="uid://bha02q22p0aew" path="res://images/CharacterSelectionBG.png" id="2_uxcyu"]
+[ext_resource type="FontFile" uid="uid://dyp31rob8yr7c" path="res://fonts/BoldPixels.ttf" id="3_fa52j"]
+[ext_resource type="Script" uid="uid://cdqb52by1mdhy" path="res://scenes/button_back.gd" id="4_uxcyu"]
+
+[node name="character_select" type="Control" unique_id=196360968]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bow2h")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1460074112]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -6.0
+offset_right = 2846.0
+offset_bottom = 1594.0
+scale = Vector2(0.45, 0.455)
+texture = ExtResource("2_uxcyu")
+
+[node name="Title" type="Label" parent="." unique_id=81810852]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 100.0
+offset_right = 1042.0
+offset_bottom = 156.0
+theme_override_fonts/font = ExtResource("3_fa52j")
+theme_override_font_sizes/font_size = 64
+text = "SELECT YOUR CHARACTER !!!"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1205742525]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 231.255
+offset_right = 1110.0
+offset_bottom = 631.255
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=165682031]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Card1" type="PanelContainer" parent="CenterContainer/HBoxContainer" unique_id=687601449]
+custom_minimum_size = Vector2(220, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer/Card1" unique_id=985135495]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PlayerLabel" type="Label" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer" unique_id=292509342]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="StateLabel" type="Label" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer" unique_id=1468131740]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="PortraitContainer" type="SubViewportContainer" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer" unique_id=523804234]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer/PortraitContainer" unique_id=1477604589]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(220, 180)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer/PortraitContainer/SubViewport" unique_id=1333825691]
+
+[node name="CharNameLabel" type="Label" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer" unique_id=537530489]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="IconsHBox" type="HBoxContainer" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer" unique_id=655585167]
+layout_mode = 2
+alignment = 1
+
+[node name="ReadyLabel" type="Label" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer" unique_id=1488037917]
+visible = false
+layout_mode = 2
+text = "Ready"
+horizontal_alignment = 1
+
+[node name="DeviceLabel" type="Label" parent="CenterContainer/HBoxContainer/Card1/VBoxContainer" unique_id=1289362482]
+visible = false
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Card2" type="PanelContainer" parent="CenterContainer/HBoxContainer" unique_id=702654003]
+custom_minimum_size = Vector2(220, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer/Card2" unique_id=1689723183]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PlayerLabel" type="Label" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer" unique_id=1271127464]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="StateLabel" type="Label" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer" unique_id=943107153]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="PortraitContainer" type="SubViewportContainer" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer" unique_id=1623060273]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer/PortraitContainer" unique_id=915110212]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(220, 180)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer/PortraitContainer/SubViewport" unique_id=2098275019]
+
+[node name="CharNameLabel" type="Label" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer" unique_id=945580825]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="IconsHBox" type="HBoxContainer" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer" unique_id=96385796]
+layout_mode = 2
+alignment = 1
+
+[node name="ReadyLabel" type="Label" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer" unique_id=1519943277]
+visible = false
+layout_mode = 2
+text = "Ready"
+horizontal_alignment = 1
+
+[node name="DeviceLabel" type="Label" parent="CenterContainer/HBoxContainer/Card2/VBoxContainer" unique_id=15711281]
+visible = false
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Card3" type="PanelContainer" parent="CenterContainer/HBoxContainer" unique_id=492621529]
+custom_minimum_size = Vector2(220, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer/Card3" unique_id=1375750159]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PlayerLabel" type="Label" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer" unique_id=483262495]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="StateLabel" type="Label" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer" unique_id=12901485]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="PortraitContainer" type="SubViewportContainer" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer" unique_id=1658846049]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer/PortraitContainer" unique_id=265498876]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(220, 180)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer/PortraitContainer/SubViewport" unique_id=1754520220]
+
+[node name="CharNameLabel" type="Label" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer" unique_id=2124081584]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="IconsHBox" type="HBoxContainer" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer" unique_id=1290073840]
+layout_mode = 2
+alignment = 1
+
+[node name="ReadyLabel" type="Label" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer" unique_id=136058643]
+visible = false
+layout_mode = 2
+text = "Ready"
+horizontal_alignment = 1
+
+[node name="DeviceLabel" type="Label" parent="CenterContainer/HBoxContainer/Card3/VBoxContainer" unique_id=221652523]
+visible = false
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Card4" type="PanelContainer" parent="CenterContainer/HBoxContainer" unique_id=1207603888]
+custom_minimum_size = Vector2(220, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer/Card4" unique_id=2038618007]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PlayerLabel" type="Label" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer" unique_id=792206394]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="StateLabel" type="Label" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer" unique_id=388709831]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="PortraitContainer" type="SubViewportContainer" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer" unique_id=713445304]
+custom_minimum_size = Vector2(180, 180)
+layout_mode = 2
+
+[node name="SubViewport" type="SubViewport" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer/PortraitContainer" unique_id=540597418]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(220, 180)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer/PortraitContainer/SubViewport" unique_id=438471400]
+
+[node name="CharNameLabel" type="Label" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer" unique_id=249555068]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="IconsHBox" type="HBoxContainer" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer" unique_id=261105280]
+layout_mode = 2
+alignment = 1
+
+[node name="ReadyLabel" type="Label" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer" unique_id=437780679]
+visible = false
+layout_mode = 2
+text = "Ready"
+horizontal_alignment = 1
+
+[node name="DeviceLabel" type="Label" parent="CenterContainer/HBoxContainer/Card4/VBoxContainer" unique_id=1421545640]
+visible = false
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1882308864]
+
+[node name="Spawn1" type="Marker2D" parent="SpawnPoints" unique_id=521576031]
+
+[node name="Spawn2" type="Marker2D" parent="SpawnPoints" unique_id=451066044]
+
+[node name="Spawn3" type="Marker2D" parent="SpawnPoints" unique_id=72018977]
+
+[node name="Spawn4" type="Marker2D" parent="SpawnPoints" unique_id=2119760404]
+
+[node name="Players" type="Node2D" parent="." unique_id=2079845096]
+position = Vector2(0, -2)
+
+[node name="Hint" type="Label" parent="." unique_id=2104146982]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="StartLabel" type="Label" parent="." unique_id=1533565721]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 417.0
+offset_top = 660.0
+offset_right = 863.0
+offset_bottom = 688.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_fa52j")
+theme_override_font_sizes/font_size = 32
+text = "Pressione \"Start\" para começar!!!"
+
+[node name="Button_back" type="Button" parent="." unique_id=2020969344]
+layout_mode = 0
+theme_override_fonts/font = ExtResource("3_fa52j")
+theme_override_font_sizes/font_size = 32
+text = "< BACK
+"
+script = ExtResource("4_uxcyu")
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="pressed" from="Button_back" to="Button_back" method="_on_pressed"]

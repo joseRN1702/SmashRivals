@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bt0n41qu28l62"]
+
+[ext_resource type="PackedScene" uid="uid://1xd6t32jpr0m" path="res://characters/rock.tscn" id="1_grwne"]
+[ext_resource type="Script" uid="uid://ds86lcke6pg33" path="res://scripts/camera_2d.gd" id="2_iv4pa"]
+[ext_resource type="PackedScene" uid="uid://br5f0nksvmrx0" path="res://characters/rock2.tscn" id="3_speln"]
+[ext_resource type="Script" uid="uid://m6sescj21bsf" path="res://scripts/percentage_ui.gd" id="4_c2rtx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jed43"]
+size = Vector2(949, 52.5)
+
+[node name="Main" type="Node2D" unique_id=1560837961]
+
+[node name="Arena" type="StaticBody2D" parent="." unique_id=117944355]
+position = Vector2(893, 482)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena" unique_id=1133769246]
+position = Vector2(-293, 184)
+shape = SubResource("RectangleShape2D_jed43")
+
+[node name="Marker2D" type="Marker2D" parent="Arena" unique_id=987465515]
+position = Vector2(-890, 239)
+
+[node name="Marker2D2" type="Marker2D" parent="Arena" unique_id=116693435]
+position = Vector2(377, -472)
+
+[node name="Players" type="Node2D" parent="Arena" unique_id=1271753023]
+
+[node name="Camera2D" type="Camera2D" parent="Arena/Players" unique_id=953399539]
+position = Vector2(-246, 30)
+zoom = Vector2(2, 2)
+script = ExtResource("2_iv4pa")
+
+[node name="rock" parent="Arena/Players" unique_id=720333593 instance=ExtResource("1_grwne")]
+position = Vector2(-610, -37)
+collision_layer = 2
+slide_on_ceiling = false
+attack = 71
+
+[node name="rock2" parent="Arena/Players" unique_id=57072936 instance=ExtResource("3_speln")]
+collision_layer = 2
+move_left = 4194319
+move_right = 4194321
+jump = 4194439
+attack = 4194438
+down = 4194322
+up = 4194320
+player = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1109531845]
+script = ExtResource("4_c2rtx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=997410495]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=675660166]
+layout_mode = 2
+
+[node name="P1" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=678514225]
+layout_mode = 2
+text = "P1"
+
+[node name="PercentageLabel1" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=1964733224]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=1939957408]
+layout_mode = 2
+
+[node name="P2" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=1770931004]
+layout_mode = 2
+text = "P2"
+
+[node name="PercentageLabel2" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=510785298]
+layout_mode = 2

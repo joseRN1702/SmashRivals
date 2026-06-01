@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://cv3blbamunh16"]
+
+[ext_resource type="Script" uid="uid://blxpn2wo1xigk" path="res://menu.gd" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://bha02q22p0aew" path="res://images/CharacterSelectionBG.png" id="2_mhnvy"]
+[ext_resource type="FontFile" uid="uid://dyp31rob8yr7c" path="res://fonts/BoldPixels.ttf" id="3_4ytvr"]
+[ext_resource type="Script" uid="uid://c25ptin3c432" path="res://scenes/Title.gd" id="4_g3eks"]
+[ext_resource type="AudioStream" uid="uid://06neorrnpafm" path="res://audio/TitleScream.mp3" id="4_mhnvy"]
+[ext_resource type="Script" uid="uid://dvp72crrqlbkj" path="res://scenes/TitleScream.gd" id="5_4ytvr"]
+
+[sub_resource type="Theme" id="Theme_g3eks"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ouk20"]
+font = ExtResource("3_4ytvr")
+font_size = 64
+outline_size = 6
+outline_color = Color(0.67897475, 0.14039156, 0, 1)
+shadow_size = 20
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Menu_jogo" type="Control" unique_id=1770499675]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+script = ExtResource("1_con2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=562641797]
+position = Vector2(638, 360)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_mhnvy")
+
+[node name="Label" type="Label" parent="." unique_id=1367590713]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_top = 142.0
+offset_right = 186.0
+offset_bottom = 198.0
+grow_horizontal = 2
+theme = SubResource("Theme_g3eks")
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 64
+text = "Smash Rivals"
+label_settings = SubResource("LabelSettings_ouk20")
+script = ExtResource("4_g3eks")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1026427661]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -120.0
+offset_right = 100.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button_strt" type="Button" parent="VBoxContainer" unique_id=1788378338]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 16
+text = "Start
+"
+
+[node name="Button_stg" type="Button" parent="VBoxContainer" unique_id=1334131560]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 16
+text = "Settings
+
+"
+
+[node name="Button_credits" type="Button" parent="VBoxContainer" unique_id=63781420]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 16
+text = "Credits
+"
+
+[node name="Button_Exit" type="Button" parent="VBoxContainer" unique_id=1561893612]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4ytvr")
+theme_override_font_sizes/font_size = 16
+text = "Exit
+"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1799992597]
+stream = ExtResource("4_mhnvy")
+parameters/looping = false
+script = ExtResource("5_4ytvr")
+
+[connection signal="pressed" from="VBoxContainer/Button_strt" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_stg" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_credits" to="." method="_on_button_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]
+[connection signal="tree_exiting" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_tree_exiting"]

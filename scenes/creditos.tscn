@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://k1doc6musxsk"]
+
+[ext_resource type="Texture2D" uid="uid://bha02q22p0aew" path="res://images/CharacterSelectionBG.png" id="1_lm0yj"]
+[ext_resource type="FontFile" uid="uid://dyp31rob8yr7c" path="res://fonts/BoldPixels.ttf" id="2_dc0wp"]
+[ext_resource type="Script" uid="uid://cdqb52by1mdhy" path="res://scenes/button_back.gd" id="3_rnov5"]
+
+[node name="Control" type="Control" unique_id=467644230]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=301463063]
+position = Vector2(638, 360)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("1_lm0yj")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1186609652]
+custom_minimum_size = Vector2(200, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -200.0
+offset_right = 113.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1567936135]
+layout_mode = 2
+
+[node name="Participantes" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1203242115]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.7882353, 0, 1)
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "PARTICIPANTES:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1751952686]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "Gabriel Leal
+José Rodrigues
+Eduardo Tavares"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArtDirection" type="Label" parent="CenterContainer/VBoxContainer" unique_id=813320652]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.7882353, 0, 1)
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "ANIMAÇÕES/ARTE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="CenterContainer/VBoxContainer" unique_id=663139298]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "Gabriel Leal
+José Rodrigues"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PROGRAMING" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1801129501]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.7882353, 0, 1)
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "PROGRAMAÇÃO:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="CenterContainer/VBoxContainer" unique_id=613843607]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "Gabriel Leal
+Eduardo Tavares
+José Rodrigues"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DOCUMENTATION" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1513392106]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.7882353, 0, 1)
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "DOCUMENTAÇÃO/GIT/VIDEO:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1834186598]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "Gabriel Leal
+José Rodrigues"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_back" type="Button" parent="." unique_id=302592126]
+layout_mode = 0
+theme_override_fonts/font = ExtResource("2_dc0wp")
+theme_override_font_sizes/font_size = 32
+text = "< BACK
+"
+script = ExtResource("3_rnov5")
+
+[connection signal="pressed" from="Button_back" to="Button_back" method="_on_pressed"]

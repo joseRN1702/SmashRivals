@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://i1ari1tapdmf"]
+
+[ext_resource type="Script" uid="uid://cimpletf8ldel" path="res://scripts/Settings.gd" id="1_5p8wc"]
+
+[node name="Settings" type="CanvasLayer" unique_id=18562817]
+script = ExtResource("1_5p8wc")
